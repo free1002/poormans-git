@@ -1,0 +1,15 @@
+Motivation:
+Recently I worked with a php programmer who don't know about source version control systems. He don't set 
+local development environment and do his works in shared development server without any backup systems. 
+I need some systems for doing backup his source codes and tracking his code-changes. Therefore, I wrote 
+this tiny script for doing backup his codes at remote git repository. (I use bitbucket for creating 
+free-private repository) Finally, I could pull and merge codes in safely and do tracking his code-changes.
+
+How to use:
+1. install python
+2. copy backup.py to your git repository
+3. do backup.py - This script just do below actions sequentially:
+  git add .
+  git rm <deleted file>
+  git commit -m 'backup'
+  git push
